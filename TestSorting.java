@@ -78,8 +78,16 @@ public class TestSorting {
 				
 				
 				driver.findElement(By.xpath("//a[text()='FINISH']")).click();
+
+                File source=driver.getScreenshotAs(OutputType.FILE);
+				
+				File dst= new File("./images/img.png");
+						
+				FileUtils.copyFile(source,dst);
+
 				
 				driver.close();
 					
 			}
 }
+
